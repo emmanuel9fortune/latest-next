@@ -354,7 +354,7 @@ const Homebod = () => {
 
 
 
-    const getit = localStorage.getItem('')
+    const getit = localStorage.getItem('targetDate')
 
     
 
@@ -513,17 +513,22 @@ const Homebod = () => {
                                     </div>
 
                                 <div className='timeclaimer'>
-                                    {
-                                        !check  ?
+                                    {   
+                                        getit ?
+                                        !check   ?
                                         <p>{hours} : {minutes} : {seconds}</p>
+                                        :
+                                        <h1>claim daily CAi point +100 !!!🎁</h1>
                                         :
                                         <h1>claim daily CAi point +100 !!!🎁</h1>
                                     }
 
-                                    {
-                                        !check || targetDate ?
+                                    {   getit ?
+                                        !check ?
 
                                         <button className='claimerbtn2'>Waiting...</button>
+                                            :
+                                        <button onClick={claimbtn} className='claimerbtn'>Claim</button>
                                             :
                                         <button onClick={claimbtn} className='claimerbtn'>Claim</button>
 
@@ -549,6 +554,7 @@ const Homebod = () => {
                                         <small>Complete a mission and get +100 CAi points</small>
                                     </div>
 
+                                    <div className='transslips' > 
                                     <div className='secboxdash1'>
                                         <div className='twt'></div>
                                         <div>
@@ -625,6 +631,9 @@ const Homebod = () => {
                                         }
                                     </div>
 
+                                    </div>
+
+
                                 </div>
                                 <div className='closser' onClick={fstpop}></div>
                             </div>
@@ -668,6 +677,8 @@ const Homebod = () => {
 
                     </div>
 
+
+
                     {
                         menu ?
                         <div className='mobbarpop' data-aos ='fade-left'>
@@ -706,7 +717,6 @@ const Homebod = () => {
                                 <div className='mobwalletbxbtn'>
                                     <WalletMultiButton className='mobbxx1'>
                                         <p className='pxx'>
-                                            {publicKey ? '' : <ClockIcon style={{width:'26px'}}/>}
                                             {publicKey ? '' : 'connect'}
                                         </p>
                                     </WalletMultiButton>
