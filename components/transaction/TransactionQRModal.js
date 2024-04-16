@@ -27,7 +27,7 @@ const TransactionQRModal = ({ modalOpen, setModalOpen, userAddress, avatar }) =>
 
                 <div className="profilebox">
                     
-                    <Image alt='' width="400" height="400"  className="profimg" src={avatar} />
+                    <Image alt='' width="150" height="150"  className="profimg" src={avatar} />
                     
                     <small>Wallet address</small>
                     {
