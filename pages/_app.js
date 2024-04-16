@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }) {
         <>
             <Head>
                 <link rel="shortcut icon" href="/log.jpg" type="image/x-icon" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Cat Ai</title>
             </Head>
                     <WalletConnectionProvider>
