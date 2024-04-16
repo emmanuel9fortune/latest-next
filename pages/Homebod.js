@@ -336,7 +336,7 @@ const Homebod = () => {
 
         // Store the ISO string in localStorage with the key 'targetDate'
         localStorage.setItem('targetDate', isoString);
-
+        window.location.reload()
     }
 
     const [check, setcheck] = useState()
