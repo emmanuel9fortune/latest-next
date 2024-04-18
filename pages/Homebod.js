@@ -310,7 +310,6 @@ const Homebod = () => {
 
 
     const claimbtn=async()=>{
-        settime()
 
         if(info?.userinfo.balance > 0 ){
             await updateDoc(doc(db, 'user', user.uid),{
@@ -322,6 +321,7 @@ const Homebod = () => {
             toast.error('insufficient balance')
         }
 
+        settime()
     }
 
     const settime=()=>{
