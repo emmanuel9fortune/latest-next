@@ -4,13 +4,16 @@ module.exports = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
+    domains: ['gravatar.com'], // Add 'gravatar.com' to the list of allowed domains
+    formats: ["image/jpg"],
     unoptimized: true,
-     remotePatterns:[
+    remotePatterns:[
       {
         protocol : "https",
-        hostname : "**"
+        hostname : "**",
+        port: '',
+        pathname: '**',
       }
     ],
-    domains: ['gravatar.com'], // Add 'gravatar.com' to the list of allowed domains
   }
 };
