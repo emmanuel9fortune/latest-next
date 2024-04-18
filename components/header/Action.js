@@ -7,7 +7,7 @@ const Action = ({ setModalOpen, publickey }) => {
  
     return (
         <div style={{width:'100%', alignItems:'center', justifyContent:'center', display:'flex'}}>
-            { publickey !== null?
+            { publickey?
                 <button onClick={onNewTransaction} className="depbtn">
                     <PaperAirplaneIcon style={{width:'32px', color:'rgb(180, 100, 245)'}}/>
                     <span className="font-medium ">Deposit</span>
