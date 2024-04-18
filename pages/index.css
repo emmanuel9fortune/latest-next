@@ -551,8 +551,10 @@ input::-webkit-inner-spin-button {
     box-shadow: 2px 4px 14px -3px black;
     border-radius: 50%;
     margin: 10px 0;
-    background-image: url('/img/logo.jpg');
+    background-image: url('/logo.gif');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .loginlogo>button{
